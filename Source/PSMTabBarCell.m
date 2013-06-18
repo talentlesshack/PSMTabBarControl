@@ -544,7 +544,7 @@ static inline NSSize scaleProportionally(NSSize imageSize, NSSize canvasSize, BO
     }
     
     enrichedUserInfo = [userInfo mutableCopy];
-    [enrichedUserInfo setObject:[NSNumber numberWithInteger:PSMTabBarCellTrackingAreaCellFrameType] forKey:@"type"];
+    enrichedUserInfo[@"type"] = @(PSMTabBarCellTrackingAreaCellFrameType);
 
     // We make the view the owner, and it delegates the calls back to the cell after it is properly setup for the corresponding row/column in the outlineview
     area = [[NSTrackingArea alloc] initWithRect:cellFrame options:options owner:controlView userInfo:enrichedUserInfo];
@@ -565,7 +565,7 @@ static inline NSSize scaleProportionally(NSSize imageSize, NSSize canvasSize, BO
         }
 
         enrichedUserInfo = [userInfo mutableCopy];
-        [enrichedUserInfo setObject:[NSNumber numberWithInteger:PSMTabBarCellTrackingAreaCloseButtonType] forKey:@"type"];
+        enrichedUserInfo[@"type"] = @(PSMTabBarCellTrackingAreaCloseButtonType);
         
         // We make the view the owner, and it delegates the calls back to the cell after it is properly setup for the corresponding row/column in the outlineview
         area = [[NSTrackingArea alloc] initWithRect:closeButtonRect options:options owner:controlView userInfo:enrichedUserInfo];
@@ -581,7 +581,7 @@ static inline NSSize scaleProportionally(NSSize imageSize, NSSize canvasSize, BO
     PSMTabBarControl *tabBarControl = [self controlView];
     NSDictionary *userInfo = [theEvent userData];
             
-    NSUInteger type = [[userInfo objectForKey:@"type"] unsignedIntegerValue];
+    NSUInteger type = [userInfo[@"type"] unsignedIntegerValue];
     switch (type) {
         case PSMTabBarCellTrackingAreaCellFrameType:
 
@@ -609,7 +609,7 @@ static inline NSSize scaleProportionally(NSSize imageSize, NSSize canvasSize, BO
     PSMTabBarControl *tabBarControl = [self controlView];
     NSDictionary *userInfo = [theEvent userData];
             
-    NSUInteger type = [[userInfo objectForKey:@"type"] unsignedIntegerValue];
+    NSUInteger type = [userInfo[@"type"] unsignedIntegerValue];
         
     switch (type) {
         case PSMTabBarCellTrackingAreaCellFrameType:
@@ -737,7 +737,7 @@ static inline NSSize scaleProportionally(NSSize imageSize, NSSize canvasSize, BO
 			attributeValue = [self stringValue];
 		}
 	} else if([attribute isEqualToString: NSAccessibilityValueAttribute]) {
-		attributeValue = [NSNumber numberWithBool:([self tabState] & PSMTab_SelectedMask)];
+		attributeValue = @([self tabState] & PSMTab_SelectedMask);
     } else if ([attribute isEqualToString:NSAccessibilityPositionAttribute] || [attribute isEqualToString:NSAccessibilitySizeAttribute]) {
         NSRect rect = [self frame];
         rect = [[self controlView] convertRect:rect toView:nil];
@@ -760,7 +760,7 @@ static inline NSSize scaleProportionally(NSSize imageSize, NSSize canvasSize, BO
 	static NSArray *actions;
 
 	if(!actions) {
-		actions = [[NSArray alloc] initWithObjects:NSAccessibilityPressAction, nil];
+		actions = @[NSAccessibilityPressAction];
 	}
 	return actions;
 }
