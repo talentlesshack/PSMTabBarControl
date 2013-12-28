@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
 
      DESC
   s.homepage     = "https://github.com/neoneye/PSMTabBarControl"
-  s.screenshots  = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.screenshots  = "https://raw.github.com/neoneye/PSMTabBarControl/master/Documents/screenshot1.png"
   s.license      = 'BSD'
   s.author       = { "Simon Strandgaard" => "simon@opcoders.com" }
   s.source       = { :git => "https://github.com/neoneye/PSMTabBarControl.git", :tag => s.version.to_s }

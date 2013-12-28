@@ -1,5 +1,8 @@
 # PSMTabBarControl
 
+![Screenshot](https://raw.github.com/neoneye/PSMTabBarControl/master/Documents/screenshot1.png)
+
+
 [![Version](http://cocoapod-badges.herokuapp.com/v/PSMTabBarControl/badge.png)](http://cocoadocs.org/docsets/PSMTabBarControl)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/PSMTabBarControl/badge.png)](http://cocoadocs.org/docsets/PSMTabBarControl)
 
