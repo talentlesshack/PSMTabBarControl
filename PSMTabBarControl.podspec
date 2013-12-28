@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PSMTabBarControl"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Safari-style tabs"
   s.description  = <<-DESC
 	 PSMTabBarControl seeks to provide developers with a high-quality, 

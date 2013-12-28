@@ -1,10 +1,12 @@
 pod "PSMTabBarControl", :path => "../PSMTabBarControl.podspec"
 
-xcodeproj "PSMTabBarControlFramework"
+xcodeproj "PSMTabBarControl.xcodeproj"
+#xcodeproj "../PSMTabBarControl.xcodeproj"
+#xcodeproj "PSMTabBarControlFramework"
+#xcodeproj `PSMTabBarControlFramework`
 
-# target "Demo" do
-# end
-# 
-# target "DemoTests" do
+
+# target "PSMTabBarControlFramework" do
+# 	xcodeproj "PSMTabBarControlFramework"
 # end
 
