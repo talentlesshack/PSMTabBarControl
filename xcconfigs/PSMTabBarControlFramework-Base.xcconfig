@@ -5,5 +5,5 @@ SKIP_INSTALL = NO
 GCC_ENABLE_OBJC_GC = unsupported
 FRAMEWORK_VERSION = A
 INSTALL_PATH = @rpath
-INFOPLIST_FILE = Source/PSMTabBarControl-Info.plist
+INFOPLIST_FILE = Classes/osx/PSMTabBarControl-Info.plist
 DYLIB_COMPATIBILITY_VERSION = 1

@@ -1,0 +1,7 @@
+pod "PSMTabBarControl", :path => "../PSMTabBarControl.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
