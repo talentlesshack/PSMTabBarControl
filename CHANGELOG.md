@@ -1,5 +1,5 @@
 # PSMTabBarControl CHANGELOG
 
-## 0.1.0
+## 1.0.2
 
-Initial release.
+Made a cocoapod with PSMTabBarControl that compiles with Xcode 5 and uses ARC.
