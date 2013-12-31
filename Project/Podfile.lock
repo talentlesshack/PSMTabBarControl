@@ -1,5 +1,5 @@
 PODS:
-  - PSMTabBarControl (1.0.4)
+  - PSMTabBarControl (1.0.3)
 
 DEPENDENCIES:
   - PSMTabBarControl (from `../PSMTabBarControl.podspec`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../PSMTabBarControl.podspec
 
 SPEC CHECKSUMS:
-  PSMTabBarControl: 5990441fd730d388ead971efb468b369362ef56b
+  PSMTabBarControl: 8fe88b3018fda740e455e42913a3af43bbc5db10
 
 COCOAPODS: 0.29.0
