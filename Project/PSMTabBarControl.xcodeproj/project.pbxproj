@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4235F99318731C8C00F7B45D /* DemoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4235F99218731C8C00F7B45D /* DemoWindow.xib */; };
+		4235F99518731CC000F7B45D /* PSMTabBarControlDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4235F99418731CC000F7B45D /* PSMTabBarControlDemo.xib */; };
+		428363C518731A1800D2570F /* demo_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 428363BD18731A1800D2570F /* demo_main.m */; };
+		428363C618731A1800D2570F /* DemoAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428363BF18731A1800D2570F /* DemoAppController.m */; };
+		428363C718731A1800D2570F /* DemoFakeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 428363C118731A1800D2570F /* DemoFakeModel.m */; };
+		428363C818731A1800D2570F /* DemoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428363C318731A1800D2570F /* DemoWindowController.m */; };
+		8BD43965118514A600DB4AC3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		E128A241B35E41CA82C66C74 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4A80FA4849450FBEDD041B /* libPods-Demo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BD4396C118514BA00DB4AC3 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		13F8B88807B434F6008AE28D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		13F8B88907B434F6008AE28D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		13F8B88A07B434F6008AE28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		294EF3DE8B164A4D9F75E2C5 /* Pods-Demo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.xcconfig"; path = "Pods/Pods-Demo.xcconfig"; sourceTree = "<group>"; };
+		3A4A80FA4849450FBEDD041B /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4235F99218731C8C00F7B45D /* DemoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoWindow.xib; sourceTree = "<group>"; };
+		4235F99418731CC000F7B45D /* PSMTabBarControlDemo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSMTabBarControlDemo.xib; sourceTree = "<group>"; };
+		428363BD18731A1800D2570F /* demo_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demo_main.m; sourceTree = "<group>"; };
+		428363BE18731A1800D2570F /* DemoAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAppController.h; sourceTree = "<group>"; };
+		428363BF18731A1800D2570F /* DemoAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppController.m; sourceTree = "<group>"; };
+		428363C018731A1800D2570F /* DemoFakeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoFakeModel.h; sourceTree = "<group>"; };
+		428363C118731A1800D2570F /* DemoFakeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoFakeModel.m; sourceTree = "<group>"; };
+		428363C218731A1800D2570F /* DemoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoWindowController.h; sourceTree = "<group>"; };
+		428363C318731A1800D2570F /* DemoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWindowController.m; sourceTree = "<group>"; };
+		428363C418731A1800D2570F /* Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
+		8BD4395A1185147D00DB4AC3 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BD439581185147D00DB4AC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD43965118514A600DB4AC3 /* Cocoa.framework in Frameworks */,
+				E128A241B35E41CA82C66C74 /* libPods-Demo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* PSMTabBarControl */ = {
+			isa = PBXGroup;
+			children = (
+				8BD439551185146A00DB4AC3 /* Demo */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				294EF3DE8B164A4D9F75E2C5 /* Pods-Demo.xcconfig */,
+			);
+			name = PSMTabBarControl;
+			sourceTree = "<group>";
+		};
+		13F8B6FD07B43410008AE28D /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		13F8B70407B43425008AE28D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F8B88807B434F6008AE28D /* AppKit.framework */,
+				13F8B88907B434F6008AE28D /* CoreData.framework */,
+				13F8B88A07B434F6008AE28D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BD4395A1185147D00DB4AC3 /* Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F8B6FD07B43410008AE28D /* Linked Frameworks */,
+				13F8B70407B43425008AE28D /* Other Frameworks */,
+				3A4A80FA4849450FBEDD041B /* libPods-Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BD439551185146A00DB4AC3 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				428363BD18731A1800D2570F /* demo_main.m */,
+				428363BE18731A1800D2570F /* DemoAppController.h */,
+				428363BF18731A1800D2570F /* DemoAppController.m */,
+				428363C018731A1800D2570F /* DemoFakeModel.h */,
+				428363C118731A1800D2570F /* DemoFakeModel.m */,
+				4235F99218731C8C00F7B45D /* DemoWindow.xib */,
+				428363C218731A1800D2570F /* DemoWindowController.h */,
+				428363C318731A1800D2570F /* DemoWindowController.m */,
+				428363C418731A1800D2570F /* Demo-Info.plist */,
+				4235F99418731CC000F7B45D /* PSMTabBarControlDemo.xib */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BD439591185147D00DB4AC3 /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD4395F1185147E00DB4AC3 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				45C52EE9BB014A0E9B6CD92A /* Check Pods Manifest.lock */,
+				8BD439561185147D00DB4AC3 /* Resources */,
+				8BD439571185147D00DB4AC3 /* Sources */,
+				8BD439581185147D00DB4AC3 /* Frameworks */,
+				8BD4396C118514BA00DB4AC3 /* Copy Frameworks */,
+				82837364C38B43B1B33B4274 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo;
+			productName = PSMTabBarControlDemo;
+			productReference = 8BD4395A1185147D00DB4AC3 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C056398B08A954F8003078D8 /* Build configuration list for PBXProject "PSMTabBarControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0259C574FE90428111CA0C5A /* PSMTabBarControl */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BD439591185147D00DB4AC3 /* Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BD439561185147D00DB4AC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4235F99318731C8C00F7B45D /* DemoWindow.xib in Resources */,
+				4235F99518731CC000F7B45D /* PSMTabBarControlDemo.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45C52EE9BB014A0E9B6CD92A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82837364C38B43B1B33B4274 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BD439571185147D00DB4AC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				428363C618731A1800D2570F /* DemoAppController.m in Sources */,
+				428363C718731A1800D2570F /* DemoFakeModel.m in Sources */,
+				428363C818731A1800D2570F /* DemoWindowController.m in Sources */,
+				428363C518731A1800D2570F /* demo_main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8BD4395D1185147E00DB4AC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294EF3DE8B164A4D9F75E2C5 /* Pods-Demo.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/Demo-Info.plist";
+				PRODUCT_NAME = Demo;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8BD4395E1185147E00DB4AC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294EF3DE8B164A4D9F75E2C5 /* Pods-Demo.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/Demo-Info.plist";
+				PRODUCT_NAME = Demo;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C056398C08A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		C056398D08A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BD4395F1185147E00DB4AC3 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD4395D1185147E00DB4AC3 /* Debug */,
+				8BD4395E1185147E00DB4AC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056398B08A954F8003078D8 /* Build configuration list for PBXProject "PSMTabBarControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398C08A954F8003078D8 /* Debug */,
+				C056398D08A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}

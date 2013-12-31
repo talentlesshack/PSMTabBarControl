@@ -1,1 +1,7 @@
-link_with "PSMTabBarControlFramework"
+platform :osx, '10.9'
+
+xcodeproj "PSMTabBarControl"
+
+target "Demo" do
+  pod "PSMTabBarControl", :path => "../PSMTabBarControl.podspec"
+end
