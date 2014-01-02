@@ -8,15 +8,10 @@
 
 #import "PSMTabBarCell.h"
 #import "PSMTabBarControl.h"
+#import "PSMTabBarControl_Private.h"
 #import "PSMTabStyle.h"
 #import "PSMProgressIndicator.h"
 #import "PSMTabDragAssistant.h"
-
-@interface PSMTabBarControl (Private)
-
-- (void)update;
-
-@end
 
 @interface PSMTabBarCell (/*Private*/)
 

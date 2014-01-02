@@ -8,6 +8,7 @@
 
 #import "PSMTabBarController.h"
 #import "PSMTabBarControl.h"
+#import "PSMTabBarControl_Private.h"
 #import "PSMTabBarCell.h"
 #import "PSMTabStyle.h"
 #import "NSString_AITruncation.h"
