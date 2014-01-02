@@ -158,7 +158,7 @@
 		0259C573FE90428111CA0C5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = C056398B08A954F8003078D8 /* Build configuration list for PBXProject "PSMTabBarControl" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -243,8 +243,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 294EF3DE8B164A4D9F75E2C5 /* Pods-Demo.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Demo-Info.plist";
 				PRODUCT_NAME = Demo;
 				SDKROOT = macosx;
@@ -255,8 +255,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 294EF3DE8B164A4D9F75E2C5 /* Pods-Demo.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Demo-Info.plist";
 				PRODUCT_NAME = Demo;
 				SDKROOT = macosx;
@@ -266,6 +266,7 @@
 		C056398C08A954F8003078D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
