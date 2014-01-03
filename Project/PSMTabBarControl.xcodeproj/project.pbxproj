@@ -13,6 +13,7 @@
 		428363C618731A1800D2570F /* DemoAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428363BF18731A1800D2570F /* DemoAppController.m */; };
 		428363C718731A1800D2570F /* DemoFakeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 428363C118731A1800D2570F /* DemoFakeModel.m */; };
 		428363C818731A1800D2570F /* DemoWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428363C318731A1800D2570F /* DemoWindowController.m */; };
+		429F2E981876793100D89B7B /* largeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 429F2E971876793100D89B7B /* largeImage.png */; };
 		8BD43965118514A600DB4AC3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		E128A241B35E41CA82C66C74 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4A80FA4849450FBEDD041B /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		428363C218731A1800D2570F /* DemoWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoWindowController.h; sourceTree = "<group>"; };
 		428363C318731A1800D2570F /* DemoWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoWindowController.m; sourceTree = "<group>"; };
 		428363C418731A1800D2570F /* Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
+		429F2E971876793100D89B7B /* largeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = largeImage.png; sourceTree = "<group>"; };
 		8BD4395A1185147D00DB4AC3 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -115,6 +117,7 @@
 		8BD439551185146A00DB4AC3 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				428363C418731A1800D2570F /* Demo-Info.plist */,
 				428363BD18731A1800D2570F /* demo_main.m */,
 				428363BE18731A1800D2570F /* DemoAppController.h */,
 				428363BF18731A1800D2570F /* DemoAppController.m */,
@@ -123,7 +126,7 @@
 				4235F99218731C8C00F7B45D /* DemoWindow.xib */,
 				428363C218731A1800D2570F /* DemoWindowController.h */,
 				428363C318731A1800D2570F /* DemoWindowController.m */,
-				428363C418731A1800D2570F /* Demo-Info.plist */,
+				429F2E971876793100D89B7B /* largeImage.png */,
 				4235F99418731CC000F7B45D /* PSMTabBarControlDemo.xib */,
 			);
 			path = Demo;
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				429F2E981876793100D89B7B /* largeImage.png in Resources */,
 				4235F99318731C8C00F7B45D /* DemoWindow.xib in Resources */,
 				4235F99518731CC000F7B45D /* PSMTabBarControlDemo.xib in Resources */,
 			);
