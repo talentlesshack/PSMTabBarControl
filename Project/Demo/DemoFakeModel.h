@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PSMTabViewItemIdentifier.h"
 
-@interface DemoFakeModel : NSObject {
+@interface DemoFakeModel : NSObject <PSMTabViewItemIdentifier> {
 	BOOL        _isProcessing;
 	NSImage     *_icon;
     NSImage     *_largeImage;

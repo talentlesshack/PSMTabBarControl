@@ -20,6 +20,7 @@
 #import "PSMCardTabStyle.h"
 #import "PSMTabDragAssistant.h"
 #import "PSMTabBarController.h"
+#import "PSMTabViewItemIdentifier.h"
 
 @interface PSMTabBarControl ()
 
@@ -675,6 +676,7 @@ static NSMutableDictionary *registeredStyleClasses;
 
 - (void)removeTabForCell:(PSMTabBarCell *)cell {
 	NSTabViewItem *item = [cell representedObject];
+	NSObject <PSMTabViewItemIdentifier> *identifier = [item identifier];
 
 	// unbind
 	[[cell indicator] unbind:@"animate"];
@@ -686,39 +688,39 @@ static NSMutableDictionary *registeredStyleClasses;
 	[cell unbind:@"countColor"];
 	[cell unbind:@"isEdited"];
 
-	if([item identifier] != nil) {
-		if([[item identifier] respondsToSelector:@selector(isProcessing)]) {
-			[[item identifier] removeObserver:cell forKeyPath:@"isProcessing"];
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(isProcessing)]) {
+			[identifier removeObserver:cell forKeyPath:@"isProcessing"];
 		}
 	}
 
-	if([item identifier] != nil) {
-		if([[item identifier] respondsToSelector:@selector(icon)]) {
-			[[item identifier] removeObserver:cell forKeyPath:@"icon"];
+	if(item != nil) {
+		if([identifier respondsToSelector:@selector(icon)]) {
+			[identifier removeObserver:cell forKeyPath:@"icon"];
 		}
 	}
 
-	if([item identifier] != nil) {
-		if([[item identifier] respondsToSelector:@selector(objectCount)]) {
-			[[item identifier] removeObserver:cell forKeyPath:@"objectCount"];
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(objectCount)]) {
+			[identifier removeObserver:cell forKeyPath:@"objectCount"];
 		}
 	}
 
-	if([item identifier] != nil) {
-		if([[item identifier] respondsToSelector:@selector(countColor)]) {
-			[[item identifier] removeObserver:cell forKeyPath:@"countColor"];
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(countColor)]) {
+			[identifier removeObserver:cell forKeyPath:@"countColor"];
 		}
 	}
 
-	if([item identifier] != nil) {
-		if([[item identifier] respondsToSelector:@selector(largeImage)]) {
-			[[item identifier] removeObserver:cell forKeyPath:@"largeImage"];
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(largeImage)]) {
+			[identifier removeObserver:cell forKeyPath:@"largeImage"];
 		}
 	}
 
-	if([item identifier] != nil) {
-		if([[item identifier] respondsToSelector:@selector(isEdited)]) {
-			[[item identifier] removeObserver:cell forKeyPath:@"isEdited"];
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(isEdited)]) {
+			[identifier removeObserver:cell forKeyPath:@"isEdited"];
 		}
 	}
 
@@ -2068,63 +2070,65 @@ static NSMutableDictionary *registeredStyleClasses;
 }
 
 - (void)_bindPropertiesForCell:(PSMTabBarCell *)cell andTabViewItem:(NSTabViewItem *)item {
+	NSObject <PSMTabViewItemIdentifier> *identifier = [item identifier];
+
 	// bind the indicator to the represented object's status (if it exists)
 	[[cell indicator] setHidden:YES];
-	if([item identifier] != nil) {
-		if([[[cell representedObject] identifier] respondsToSelector:@selector(isProcessing)]) {
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(isProcessing)]) {
 			NSMutableDictionary *bindingOptions = [NSMutableDictionary dictionary];
 			bindingOptions[@"NSValueTransformerName"] = NSNegateBooleanTransformerName;
-			[[cell indicator] bind:@"animate" toObject:[item identifier] withKeyPath:@"isProcessing" options:nil];
-			[[cell indicator] bind:@"hidden" toObject:[item identifier] withKeyPath:@"isProcessing" options:bindingOptions];
-			[[item identifier] addObserver:cell forKeyPath:@"isProcessing" options:0 context:nil];
+			[[cell indicator] bind:@"animate" toObject:identifier withKeyPath:@"isProcessing" options:nil];
+			[[cell indicator] bind:@"hidden" toObject:identifier withKeyPath:@"isProcessing" options:bindingOptions];
+			[identifier addObserver:cell forKeyPath:@"isProcessing" options:0 context:nil];
 		}
 	}
 
 	// bind for the existence of an icon
 	[cell setHasIcon:NO];
-	if([item identifier] != nil) {
-		if([[[cell representedObject] identifier] respondsToSelector:@selector(icon)]) {
+	if(item != nil) {
+		if([identifier respondsToSelector:@selector(icon)]) {
 			NSMutableDictionary *bindingOptions = [NSMutableDictionary dictionary];
 			bindingOptions[@"NSValueTransformerName"] = NSIsNotNilTransformerName;
-			[cell bind:@"hasIcon" toObject:[item identifier] withKeyPath:@"icon" options:bindingOptions];
-			[[item identifier] addObserver:cell forKeyPath:@"icon" options:0 context:nil];
+			[cell bind:@"hasIcon" toObject:identifier withKeyPath:@"icon" options:bindingOptions];
+			[identifier addObserver:cell forKeyPath:@"icon" options:0 context:nil];
 		}
 	}
 
 	// bind for the existence of a counter
 	[cell setCount:0];
-	if([item identifier] != nil) {
-		if([[[cell representedObject] identifier] respondsToSelector:@selector(objectCount)]) {
-			[cell bind:@"count" toObject:[item identifier] withKeyPath:@"objectCount" options:nil];
-			[[item identifier] addObserver:cell forKeyPath:@"objectCount" options:0 context:nil];
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(objectCount)]) {
+			[cell bind:@"count" toObject:identifier withKeyPath:@"objectCount" options:nil];
+			[identifier addObserver:cell forKeyPath:@"objectCount" options:0 context:nil];
 		}
 	}
 
 	// bind for the color of a counter
 	[cell setCountColor:nil];
-	if([item identifier] != nil) {
-		if([[[cell representedObject] identifier] respondsToSelector:@selector(countColor)]) {
-			[cell bind:@"countColor" toObject:[item identifier] withKeyPath:@"countColor" options:nil];
-			[[item identifier] addObserver:cell forKeyPath:@"countColor" options:0 context:nil];
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(countColor)]) {
+			[cell bind:@"countColor" toObject:identifier withKeyPath:@"countColor" options:nil];
+			[identifier addObserver:cell forKeyPath:@"countColor" options:0 context:nil];
 		}
 	}
 
 	// bind for a large image
 	[cell setHasLargeImage:NO];
-	if([item identifier] != nil) {
-		if([[[cell representedObject] identifier] respondsToSelector:@selector(largeImage)]) {
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(largeImage)]) {
 			NSMutableDictionary *bindingOptions = [NSMutableDictionary dictionary];
 			bindingOptions[@"NSValueTransformerName"] = NSIsNotNilTransformerName;
-			[cell bind:@"hasLargeImage" toObject:[item identifier] withKeyPath:@"largeImage" options:bindingOptions];
-			[[item identifier] addObserver:cell forKeyPath:@"largeImage" options:0 context:nil];
+			[cell bind:@"hasLargeImage" toObject:identifier withKeyPath:@"largeImage" options:bindingOptions];
+			[identifier addObserver:cell forKeyPath:@"largeImage" options:0 context:nil];
 		}
 	}
 
 	[cell setIsEdited:NO];
-	if([item identifier] != nil) {
-		if([[[cell representedObject] identifier] respondsToSelector:@selector(isEdited)]) {
-			[cell bind:@"isEdited" toObject:[item identifier] withKeyPath:@"isEdited" options:nil];
-			[[item identifier] addObserver:cell forKeyPath:@"isEdited" options:0 context:nil];
+	if(identifier != nil) {
+		if([identifier respondsToSelector:@selector(isEdited)]) {
+			[cell bind:@"isEdited" toObject:identifier withKeyPath:@"isEdited" options:nil];
+			[identifier addObserver:cell forKeyPath:@"isEdited" options:0 context:nil];
 		}
 	}
 
